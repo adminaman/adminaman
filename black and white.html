@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>black and white</title>
+	<style type="text/css">
+		*
+		{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body
+		{
+			/*background-color: #000;*/
+			padding-left:9%;
+		}
+		.left
+		{
+			/*padding-left:10%;*/
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			background-color:#222222;
+			width: 124px;
+		}
+		.sideimage img
+		{
+			width:100%;
+			display: block;
+			
+		}
+		
+		.box
+		{
+			width: 100%;
+			/*background-color: red;*/
+			justify-content: center;
+			align-items: center;
+			font-family: montserrat,sans-serif;
+			color: white;
+		}
+		.box .icon
+		{
+			
+			padding: 10px;
+			text-align: center;
+			font-size: 32px;
+		}
+		.box .para
+		{
+			/*padding-top: 3px;*/
+			text-transform: uppercase;
+			font-weight: 400;
+			text-align: center;
+			font-size:12px;
+			padding:05px;
+		}
+
+		.box:hover
+		{
+			color: white;
+			background-color:#000;
+		}
+		.box.active
+		{
+			background-color: black;
+		}
+		.box.active:hover
+		{
+			color: #000000;
+			background-color:grey;
+		}
+		.right
+		{
+			
+			width:100%;
+			padding: 0px 10%;
+			background-color:#000;
+		}
+		.right .child
+		{
+			background-color:#000;
+			
+			width: 100%;
+		}
+		.headname
+		{
+			padding: 20px 0;
+			font-size: 64px;
+			text-align: center;
+			font-family: montserrat,sans-serif;
+			color: white;
+		}
+		.profession
+		{
+			text-align: center;
+			font: 15px montserrat,sans-serif;
+			font-weight: 400;
+			color: white;
+
+		}
+		.photo img
+		{
+			padding-top: 15px;
+			width: 100%;
+			display: block;
+		}
+		.myname
+		{
+			padding-top: 10px;
+			text-transform: uppercase;
+			font:30px montserrat,sans-serif;
+			font-weight: 400;
+			color: white;
+
+		}
+		.line
+		{
+			max-width: 160px;
+			border-bottom: 1px solid white;
+			padding: 10px;
+		}
+		.intro
+		{
+			padding: 15px 2px;
+			color: white;
+			font:15px montserrat,sans-serif;
+			text-align: justify;
+			line-height: 20px;
+		}
+		.intro.active
+		{
+			color:#9e9e9e;
+			font:15px montserrat,sans-serif;
+			letter-spacing: 2.5px;
+			padding-top: 20px;
+		}
+		.skill
+		{
+			padding-top:10px;
+			/*text-transform: uppercase;*/
+			color: white;
+			font:25px montserrat,sans-serif;
+		}
+		.border1
+		{
+			color: white;
+			padding: 13px;
+			width: 100%;
+			text-align: center;
+			background-color:#616161;
+			border-right:50px solid white;
+
+		}
+
+		.border1.aman
+		{
+			border-right:100px solid white;
+
+		}
+		.border1.akash
+		{
+
+			border-right:150px solid white;
+		}
+
+		.partnerbox
+		{
+			margin-top: 20px;
+			width: 100%;
+			background-color:white;
+			display: flex;
+			justify-content:space-around;
+			align-items: center;
+		}
+		.partnerbox .text
+		{
+			padding: 35px;
+			color: #000;
+			font:15px montserrat,sans-serif;
+			overflow: hidden;
+
+		}
+		.partnerbox .text p
+		{
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.downloardbutton
+		{
+			width: max-content;
+			background-color: white;
+			font:15px montserrat,sans-serif;
+			margin: 16px 0px;
+			padding: 12px 24px;
+
+		}
+		.downloardbutton:hover
+		{
+			background-color: #c1c1c1;
+			cursor: pointer;
+		}
+		.pricebox
+		{
+			
+			padding-top: 15px;
+			display: flex;
+			justify-content:space-between;
+		}
+		.pricebox .child
+		{
+			width: 49%;
+			background-color:#c5c5c5;
+		}
+		.pricebox .child:hover
+		{
+			background-color:#f5f5f5;
+		}
+		.pricebox .child .row
+		{
+			font:15px montserrat,sans-serif;
+			text-align: center;
+			padding: 15px 0px;
+			border-bottom: 1px solid black;
+		}
+		
+		.pricebox .child .row.head
+		{
+			color: #fff;
+			background-color:#616161;
+			font:25px montserrat,sans-serif;
+			font-weight: bold;
+			padding-bottom: 10px;
+		}
+		.pricebox .child .row.button
+		{
+			margin: 15px auto;
+			color:black;
+			width:100px;
+			/*height: 100px;*/
+			background-color:#ccc;
+			border-style: none;
+		}
+		.pricebox .child .row.button:hover
+		{
+			background-color: black;
+			color: white;
+		}
+
+		.myphotos
+		{
+			width: 100%;
+			margin-top: 30px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.myphotos .child
+		{
+			width: 49.50%;
+			/*background-color: white;*/
+			
+		}
+		.myphotos .child img
+		{
+			margin-bottom:10px;
+			width: 100%;
+			display: block;
+			margin-top: 10px;
+
+		}
+		.reputation
+		{
+			width: 100%;
+			/*background-color:blue;*/
+			
+			margin-top: 20px;
+			
+		
+		}
+		.reputation .child img
+		{
+			height: 100px;
+			width: 100px;
+			border-radius: 100%;
+			margin-top: 10px;
+			
+		}
+		.contact
+		{
+			font-size: 35px;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			margin-top: 10px;
+			
+		
+		}
+		.contact span
+		{
+
+			font:18px montserrat,sans-serif;
+			color:#616161;
+			padding-left: 10px;
+
+		}
+		.fotter
+		{
+			width: 100%;
+			background-color:black;
+			height: 150px;
+			margin-top: 100px;
+		}
+		.fotter .child
+		{
+			font-size: 25px;
+			color: #616161;
+			padding: 10px 0;
+			letter-spacing:2px;
+		}
+		.fotter .child i:hover
+		{
+			font-size:35px;
+			color: black;
+			background-color:#616161;
+			cursor: pointer;
+		}
+		.fotter .text
+		{
+			color: #616161;
+			font:20px montserrat,sans-serif;
+
+		}
+		input[type=text]
+		{
+
+			font:15px montserrat,sans-serif;
+			width: 100%;
+			padding: 12px 20px;
+			margin:5px 0px;
+		}
+		@media only screen and (max-width:583px)
+		{
+			body
+			{
+				padding: 0;
+			}
+			.left .sideimage
+			{
+				display: none;
+			}
+			.box .icon
+			{
+				display: none;
+			}
+			.left 			
+			{
+				width: 100%;
+				max-height: 30px;
+				display: flex;
+				/*display: block;*/
+			}
+			.box .para
+			{
+				padding-top: 5px;
+				font-size: 15px;
+				
+			}
+			.box:hover
+			{
+			color: white;
+			background-color:#ccc;
+			}
+
+			.box.active
+			{
+			background:none ;
+			}
+			
+			.headname span
+			{
+			display: none;
+			}
+			.line
+			{
+				max-width:160px;
+			}
+			.partnerbox
+			{
+				flex-direction:column;
+			}
+			.pricebox
+			{
+				
+				flex-direction:column;
+
+
+			}
+			.pricebox .child
+
+			{
+				margin-bottom: 30px;
+				width: 100%;
+			}
+			.myphotos
+			{
+				flex-direction: column;
+			}
+			.myphotos .child
+			{
+				width: 100%;
+			}
+			
+
+			
+		} 
+	</style>
+</head>
+<body>
+	<div class="left">
+		
+		<div class="sideimage"><img src="https://www.w3schools.com/w3images/avatar_smoke.jpg" ></div>
+		<div class="box active">
+			<div class="icon"><i class="fa fa-home"></i></div>
+			<div class="para">home</div>
+		</div>
+		<div class="box">	
+			<div class="icon"><i class="fa fa-user"></i></div>
+			<div class="para">about</div>
+		</div>
+		<div class="box">
+			<div class="icon"><i class="fa fa-eye"></i></div>
+			<div class="para">photos</div>
+		</div>	
+		<div class="box">
+			<div class="icon"><i class="fa fa-envelope"></i></div>
+			<div class="para">contact</div>
+		</div>
+			
+		
+		
+		
+	</div>
+	<div class="right">
+		<div class="child">
+			<div class="headname"><span>I'm</span> John Doe.</div>
+			<div class="profession">Photographer and Web Designer.</div>
+			<div class="photo">
+				<img src="https://www.w3schools.com/w3images/man_smoke.jpg">
+			</div>
+			<div class="myname">my name</div>
+			<div class="line"></div>
+			<div class="intro">Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+
+			<div class="skill">My Skills</div>
+			<div class="intro active">Photography</div>
+			<div class="border1"></div>
+			<div class="intro active">Web Design</div>
+			<div class="border1 aman"></div>
+			<div class="intro active">Photoshop</div>
+			<div class="border1 akash"></div>
+			<div class="partnerbox">
+				<div class="text"><p>11+</p>partners</div>
+				<div class="text"><p>55+</p>Projects Done</div>
+				<div class="text"><p>89+</p>Happy Clients</div>
+				<div class="text"><p>150+</p>Meetings</div>
+			</div>
+			<div class="downloardbutton"><i class="fa fa-download"></i> Download Resume</div>
+
+		</div>
+		<div class="child">
+			<div class="skill">My Price</div>
+			<div class="pricebox">
+				<div class="child">
+					<div class="row head">Basic</div>
+					<div class="row">Web Design</div>
+					<div class="row">Photography</div>
+					<div class="row">5GB Storage</div>
+					<div class="row">Mail Support</div>
+					<div class="row">$ 10<br>per month</div>
+					<div class="row button"><span>Sign up</span></div>
+				</div>
+				<div class="child">
+					<div class="row head">Pro</div>
+					<div class="row">Web Design</div>
+					<div class="row">Photography</div>
+					<div class="row">50GB Storage</div>
+					<div class="row">Mail Support</div>
+					<div class="row">$ 25<br>per month</div>
+					<div class="row button"><span>Sign up</span></div>
+				</div>
+			</div>
+		<div class="reputation">
+		<div class="skill">My Reputation</div>
+		<div class="child">
+			<img src="https://www.w3schools.com/w3images/bandmember.jpg">
+		</div>			
+		<div class="child">
+			<img src="https://www.w3schools.com/w3images/avatar_g2.jpg">
+		</div>			
+		</div>	
+		
+		<div class="skill">My photos</div>
+		<div class="line"></div>
+		<div class="myphotos">
+			<div class="child">
+				<img src="https://www.w3schools.com/w3images/wedding.jpg">
+				<img src="https://www.w3schools.com/w3images/rocks.jpg">
+				<img src="https://www.w3schools.com/w3images/sailboat.jpg">
+			</div>
+			<div class="child">
+				<img src="https://www.w3schools.com/w3images/underwater.jpg">
+				<img src="https://www.w3schools.com/w3images/chef.jpg">
+				<img src="https://www.w3schools.com/w3images/wedding.jpg">
+				<img src="https://www.w3schools.com/w3images/p6.jpg">
+				
+			</div>
+		</div><br><br><br>
+		<div class="skill">Contact Me</div>
+		<div class="line"></div>
+		<div class="contact">
+			<i class="fa fa-home"><span> Chicago, US</span></i>
+			<i class="fa fa-phone"><span>   Phone: +00 151515</span></i>
+			<i class="fa fa-envelope"><span> Email: mail@mail.com</span></i>
+		</div><br><br>	
+		<div class="intro">Let's get in touch. Send me a message:</div>
+		<input type="text" name="" placeholder="Name">
+		<input type="text" name="" placeholder="Email">
+		<input type="text" name="" placeholder="Subject">
+		<input type="text" name="" placeholder="Message">
+		<div class="downloardbutton"><i class="fa fa-paper-plane"></i> SEND MESSAGE</div>
+		</div>
+		<div class="fotter">
+			<div class="child">
+				<i class="fa fa-facebook"></i>	
+				<i class="fa fa-instagram"></i>	
+				<i class="fa fa-snapchat"></i>	
+				<i class="fa fa-twitter"></i>	
+				<i class="fa fa-linkedin"></i>	
+				<i class="fa fa-pinterest"></i>	
+			</div>
+			<div class="text">Powered by w3.css</div>
+		</div>
+	</div>
+
+</body>
+</html>
